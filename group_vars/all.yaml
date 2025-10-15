@@ -1,2 +1,3 @@
 MONGODB_HOST: mongodb.dops.fun
 REDIS_HOST: redis.dops.fun
+CATALOGUE_HOST: catalogue.dops.fun
