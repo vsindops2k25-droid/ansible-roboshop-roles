@@ -1,0 +1,33 @@
+ - name: add application user
+   ansible.builtin.user:
+      name: roboshop
+      comment: roboshop system user
+      system: true
+      shell: /sbin/nologin
+      home: /home
+
+ - name: remove app directory  # safe to remove if already present
+   ansible.builtin.file:
+      path: /app
+      state: absent
+
+ - name: create application directory
+   ansible.builtin.file:
+      state: directory
+      path: /app
+
+ - name: delete old {{ component }} content
+   ansible.builtin.file:
+      path: /tmp/{{ component }}.zip
+      state: absent
+ 
+ - name: download {{ component }} application content
+   ansible.builtin.get_url:
+      url: "https://roboshop-artifacts.s3.amazonaws.com/{{ component }}-v3.zip"
+      dest: /tmp/{{ component }}.zip
+
+ - name: unzip application content
+   ansible.builtin.unarchive:
+      src: /tmp/{{ component }}.zip
+      dest: /app
+      remote_src: yes
