@@ -1,7 +1,0 @@
-
-# in this script, when the playbook is run, it will look for the 'common' role and execute the tasks defined in the 'app-setup.yaml' file within that role.
-
-- name: app setup      # descriptive name of the playbook task
-  ansible.builtin.import_role:    # this part tells Ansible to import a role called 'common'  and run tasks defined in 'app-setup.yaml'
-    name: common
-    tasks_from: app-setup.yaml
