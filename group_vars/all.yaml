@@ -3,3 +3,5 @@ REDIS_HOST: redis.dops.fun
 CATALOGUE_HOST: catalogue.dops.fun
 CART_HOST: cart.dops.fun
 MYSQL_HOST: mysql.dops.fun
+USER_HOST: user.dops.fun
+RABBITMQ_HOST: rabbitmq.dops.fun
