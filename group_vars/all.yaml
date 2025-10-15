@@ -5,3 +5,5 @@ CART_HOST: cart.dops.fun
 MYSQL_HOST: mysql.dops.fun
 USER_HOST: user.dops.fun
 RABBITMQ_HOST: rabbitmq.dops.fun
+SHIPPING_HOST: shipping.dops.fun
+PAYMENT_HOST: payment.dops.fun
