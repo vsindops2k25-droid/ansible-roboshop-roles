@@ -1,3 +1,5 @@
 MONGODB_HOST: mongodb.dops.fun
 REDIS_HOST: redis.dops.fun
 CATALOGUE_HOST: catalogue.dops.fun
+CART_HOST: cart.dops.fun
+MYSQL_HOST: mysql.dops.fun
