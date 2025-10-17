@@ -5,11 +5,15 @@
   ansible.builtin.import_role:    # this part tells Ansible to import a role called 'common'  and run tasks defined in 'app-setup.yaml'
     name: common
     tasks_from: app-setup.yaml
+  tags:
+    - deployment
 
 - name: app setup      
   ansible.builtin.import_role:  
     name: common
     tasks_from: nodejs.yaml
+  tags:
+    - deployment
 
       # system setup mongodb
 
@@ -35,3 +39,5 @@
   ansible.builtin.import_role:  
     name: common
     tasks_from: system-setup.yaml
+  tags:
+    - deployment
